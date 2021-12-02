@@ -34,4 +34,19 @@ class DemoTest {
         assertEquals("1 0 E",result);
 
     }
+
+    @Test
+    void should_locationY_minus_one_space_when_execute_command_given_direction_S_and_command_M() {
+//        given
+        MarsRover marsRover = new MarsRover(0,0,"S");
+        String command = "M";
+
+//        when
+        marsRover.executeCommand(command);
+        String result = marsRover.getStatus();
+
+//        then
+        assertEquals("0 -1 S",result);
+
+    }
 }

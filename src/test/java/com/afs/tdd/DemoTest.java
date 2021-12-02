@@ -64,4 +64,19 @@ class DemoTest {
         assertEquals("-1 0 W",result);
 
     }
+
+    @Test
+    void should_direction_turn_to_W_when_execute_command_given_direction_N_and_command_L() {
+//        given
+        MarsRover marsRover = new MarsRover(0,0,"N");
+        String command = "L";
+
+//        when
+        marsRover.executeCommand(command);
+        String result = marsRover.getStatus();
+
+//        then
+        assertEquals("0 0 W",result);
+
+    }
 }

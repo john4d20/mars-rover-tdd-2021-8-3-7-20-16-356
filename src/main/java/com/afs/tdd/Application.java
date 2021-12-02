@@ -23,6 +23,9 @@ class MarsRover {
         else if (this.direction == "E"){
             this.locationX++;
         }
+        else if (this.direction == "S"){
+            this.locationY--;
+        }
 
     }
 

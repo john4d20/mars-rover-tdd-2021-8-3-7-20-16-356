@@ -50,7 +50,7 @@ class MarsRover {
         else if (this.direction.equals("S")){
             this.direction = "E";
         }
-        else if (this.direction.equals("E")){
+        else {
             this.direction = "N";
         }
     }
@@ -65,7 +65,7 @@ class MarsRover {
         else if (this.direction.equals("S")){
             this.locationY--;
         }
-        else if (this.direction.equals("W")){
+        else {
             this.locationX--;
         }
 

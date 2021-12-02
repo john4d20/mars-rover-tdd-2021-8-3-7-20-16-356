@@ -77,9 +77,9 @@ class MarsRover {
         return String.format("%d %d %s",locationX,locationY,direction);
     }
 
-//    public void executeCommands(String commands) {
-//        for (char command : commands.toCharArray()){
-//            executeCommand(command);
-//        }
-//    }
+    public void executeCommands(String commands) {
+        for (char command : commands.toCharArray()){
+            executeCommand(command);
+        }
+    }
 }

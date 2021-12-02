@@ -21,9 +21,9 @@ class DemoTest {
     }
 
     @Test
-    void should_locationX_add_one_space_when_execute_command_given_direction_N_and_command_M() {
+    void should_locationX_add_one_space_when_execute_command_given_direction_E_and_command_M() {
 //        given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0,0,"E");
         String command = "M";
 
 //        when
@@ -31,7 +31,7 @@ class DemoTest {
         String result = marsRover.getStatus();
 
 //        then
-        assertEquals("1 0 N",result);
+        assertEquals("1 0 E",result);
 
     }
 }

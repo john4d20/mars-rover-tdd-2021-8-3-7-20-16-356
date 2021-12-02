@@ -94,4 +94,19 @@ class DemoTest {
         assertEquals("0 0 S",result);
 
     }
+
+    @Test
+    void should_direction_turn_to_E_when_execute_command_given_direction_S_and_command_L() {
+//        given
+        MarsRover marsRover = new MarsRover(0,0,"S");
+        String command = "L";
+
+//        when
+        marsRover.executeCommand(command);
+        String result = marsRover.getStatus();
+
+//        then
+        assertEquals("0 0 E",result);
+
+    }
 }

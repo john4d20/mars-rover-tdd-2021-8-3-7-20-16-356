@@ -1,5 +1,7 @@
 package com.afs.tdd;
 
+import java.util.List;
+
 class MarsRover {
     private int locationX;
     private int locationY;
@@ -12,11 +14,11 @@ class MarsRover {
     }
 
 
-    public void executeCommand(String command) {
-        if (command.equals("M")){
+    private void executeCommand(char command) {
+        if (command == ('M')){
             move();
         }
-        else if (command.equals("L")){
+        else if (command == ('L')){
             turnLeft();
         }
         else {
@@ -74,4 +76,10 @@ class MarsRover {
     public String getStatus(){
         return String.format("%d %d %s",locationX,locationY,direction);
     }
+
+//    public void executeCommands(String commands) {
+//        for (char command : commands.toCharArray()){
+//            executeCommand(command);
+//        }
+//    }
 }

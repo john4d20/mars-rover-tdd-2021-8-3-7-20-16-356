@@ -2,6 +2,8 @@ package com.afs.tdd;
 
 import org.junit.jupiter.api.Test;
 
+
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DemoTest {
@@ -9,10 +11,10 @@ class DemoTest {
     void should_locationY_add_one_space_when_execute_command_given_direction_N_and_command_M() {
 
         MarsRover marsRover = new MarsRover(0,0,"N");
-        String command = "M";
+        String commands = "M";
 
 
-        marsRover.executeCommand(command);
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -24,10 +26,10 @@ class DemoTest {
     void should_locationX_add_one_space_when_execute_command_given_direction_E_and_command_M() {
 
         MarsRover marsRover = new MarsRover(0,0,"E");
-        String command = "M";
+        String commands = "M";
 
 
-        marsRover.executeCommand(command);
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -39,10 +41,12 @@ class DemoTest {
     void should_locationY_minus_one_space_when_execute_command_given_direction_S_and_command_M() {
 
         MarsRover marsRover = new MarsRover(0,0,"S");
-        String command = "M";
+        String commands = "M";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -54,10 +58,12 @@ class DemoTest {
     void should_locationX_minus_one_space_when_execute_command_given_direction_W_and_command_M() {
 
         MarsRover marsRover = new MarsRover(0,0,"W");
-        String command = "M";
+        String commands = "M";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -69,10 +75,12 @@ class DemoTest {
     void should_direction_turn_to_W_when_execute_command_given_direction_N_and_command_L() {
 
         MarsRover marsRover = new MarsRover(0,0,"N");
-        String command = "L";
+        String commands = "L";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -84,10 +92,12 @@ class DemoTest {
     void should_direction_turn_to_S_when_execute_command_given_direction_W_and_command_L() {
 
         MarsRover marsRover = new MarsRover(0,0,"W");
-        String command = "L";
+        String commands = "L";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -99,10 +109,12 @@ class DemoTest {
     void should_direction_turn_to_E_when_execute_command_given_direction_S_and_command_L() {
 
         MarsRover marsRover = new MarsRover(0,0,"S");
-        String command = "L";
+        String commands = "L";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -114,10 +126,12 @@ class DemoTest {
     void should_direction_turn_to_N_when_execute_command_given_direction_E_and_command_L() {
 
         MarsRover marsRover = new MarsRover(0,0,"E");
-        String command = "L";
+        String commands = "L";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -129,10 +143,12 @@ class DemoTest {
     void should_direction_turn_to_E_when_execute_command_given_direction_N_and_command_R() {
 
         MarsRover marsRover = new MarsRover(0,0,"N");
-        String command = "R";
+        String commands = "R";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -144,10 +160,12 @@ class DemoTest {
     void should_direction_turn_to_N_when_execute_command_given_direction_W_and_command_R() {
 
         MarsRover marsRover = new MarsRover(0,0,"W");
-        String command = "R";
+        String commands = "R";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -158,10 +176,12 @@ class DemoTest {
     @Test
     void should_direction_turn_to_W_when_execute_command_given_direction_S_and_command_R() {
         MarsRover marsRover = new MarsRover(0,0,"S");
-        String command = "R";
+        String commands = "R";
 
 
-        marsRover.executeCommand(command);
+
+
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
@@ -173,14 +193,27 @@ class DemoTest {
     void should_direction_turn_to_S_when_execute_command_given_direction_E_and_command_R() {
 
         MarsRover marsRover = new MarsRover(0,0,"E");
-        String command = "R";
+        String commands = "R";
 
 
-        marsRover.executeCommand(command);
+        marsRover.executeCommands(commands);
         String result = marsRover.getStatus();
 
 
         assertEquals("0 0 S",result);
+
+    }
+
+    @Test
+    void should_be_locationX_negative1_locationY_1_direction_N_when_execute_command_given_direction_N_locationX_0_location_Y_0_and_command_MLMR() {
+
+        MarsRover marsRover = new MarsRover(0,0,"N");
+        String commands = "MLMR";
+        marsRover.executeCommands(commands);
+        String result = marsRover.getStatus();
+
+
+        assertEquals("-1 1 N",result);
 
     }
 }

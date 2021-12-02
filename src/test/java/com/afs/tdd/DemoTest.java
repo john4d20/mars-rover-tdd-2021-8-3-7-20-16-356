@@ -143,7 +143,7 @@ class DemoTest {
     @Test
     void should_direction_turn_to_N_when_execute_command_given_direction_W_and_command_R() {
 //        given
-        MarsRover marsRover = new MarsRover(0,0,"N");
+        MarsRover marsRover = new MarsRover(0,0,"W");
         String command = "R";
 
 //        when

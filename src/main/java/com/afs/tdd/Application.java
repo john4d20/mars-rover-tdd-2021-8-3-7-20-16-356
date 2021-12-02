@@ -29,6 +29,9 @@ class MarsRover {
         if (this.direction.equals("N")){
             this.direction = "E";
         }
+        else if (this.direction.equals("W")){
+            this.direction = "N";
+        }
     }
 
     private void turnLeft() {

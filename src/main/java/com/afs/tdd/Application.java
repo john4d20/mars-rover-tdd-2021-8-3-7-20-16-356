@@ -17,7 +17,7 @@ class MarsRover {
     }
 
     private void move(){
-//        this.locationY++;
+        this.locationY++;
     }
 
     public String getStatus(){

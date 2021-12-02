@@ -13,20 +13,32 @@ class MarsRover {
 
 
     public void executeCommand(String command) {
-        move();
+        if (command.equals("M")){
+            move();
+        }
+        else if (command.equals("L")){
+            turnLeft();
+        }
+
+    }
+
+    private void turnLeft() {
+        if (this.direction.equals("N")){
+            this.direction = "W";
+        }
     }
 
     private void move(){
-        if (this.direction == "N"){
+        if (this.direction.equals("N")){
             this.locationY++;
         }
-        else if (this.direction == "E"){
+        else if (this.direction.equals("E")){
             this.locationX++;
         }
-        else if (this.direction == "S"){
+        else if (this.direction.equals("S")){
             this.locationY--;
         }
-        else if (this.direction == "W"){
+        else if (this.direction.equals("W")){
             this.locationX--;
         }
 

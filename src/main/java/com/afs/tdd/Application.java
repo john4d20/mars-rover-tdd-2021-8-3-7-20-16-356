@@ -19,7 +19,16 @@ class MarsRover {
         else if (command.equals("L")){
             turnLeft();
         }
+        else {
+            turnRight();
+        }
 
+    }
+
+    private void turnRight() {
+        if (this.direction.equals("N")){
+            this.direction = "E";
+        }
     }
 
     private void turnLeft() {
